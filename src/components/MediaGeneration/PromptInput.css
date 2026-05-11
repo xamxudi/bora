@@ -1,0 +1,56 @@
+.prompt-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.prompt-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #bbbbbb;
+  margin-bottom: 6px;
+}
+
+.prompt-input {
+  padding: 10px 12px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: var(--color-surface);
+  color: #e0e0e0;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.prompt-input:focus {
+  border-color: #888;
+  box-shadow: 0 0 0 2px rgba(136, 136, 136, 0.3);
+  outline: none;
+}
+
+.prompt-input::placeholder {
+  color: #666;
+}
+
+/* Nút icon mũi tên */
+.toggle-negative {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.toggle-icon-btn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #aaa;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.toggle-icon-btn:hover {
+  color: #ddd;
+}

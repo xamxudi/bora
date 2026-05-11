@@ -1,0 +1,58 @@
+.otp-form-container {
+  max-width: 380px;
+  margin: 32px auto 0 auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(44, 183, 233, 0.10);
+  padding: 28px 20px 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-input-group {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 16px 0 24px 0;
+}
+
+.otp-input {
+  width: 36px;
+  height: 44px;
+  font-size: 1.4rem;
+  text-align: center;
+  border: 2.5px solid #2bc0e4;
+  border-radius: 14px;
+  background: #f8fafc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(44, 183, 233, 0.07);
+  margin: 0 2px;
+}
+.otp-input:focus {
+  border-color: #1976d2;
+  background: #e0f7fa;
+  box-shadow: 0 0 0 2px #2bc0e433;
+}
+.otp-input[disabled] {
+  background: #f0f0f0;
+  color: #bdbdbd;
+}
+
+@media (max-width: 600px) {
+  .otp-form-container {
+    max-width: 98vw;
+    padding: 12px 4px 16px 4px;
+    border-radius: 10px;
+  }
+  .otp-input {
+    width: 24px;
+    height: 32px;
+    font-size: 1rem;
+    border-radius: 8px;
+  }
+  .otp-input-group {
+    gap: 4px;
+  }
+}

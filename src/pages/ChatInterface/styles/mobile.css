@@ -1,0 +1,64 @@
+@media (max-width: 768px) {
+  .chat-container {
+    height: calc(96vh - 85px);
+    flex-direction: column;
+    position: relative;
+  }
+
+  .chat-sidebar {
+    position: fixed;
+    top: 130px;
+    left: -100%;
+    width: 260px;
+    height: 100vh;
+    overflow-y: auto;
+    transition: left 0.3s ease-in-out;
+    z-index: 900;
+    padding: 12px;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .chat-container.sidebar-mobile-open .chat-sidebar {
+    left: 0;
+  }
+
+  .chat-main {
+    flex: 1;
+    height: 100vh;
+  }
+
+  .chat-input-container {
+    padding: 16px;
+  }
+  .chat-message {
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 14px;
+  }
+
+  .chat-disclaimer {
+    color: #666;
+    font-size: 12px;
+  }
+
+  .model-select-box {
+    display: none;
+  }
+
+  .chat-mobile-header-wrapper {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 900;
+    padding: 8px 12px;
+  }
+
+  .scrollable-sidebar {
+    height: 100%;
+    overflow-y: auto;
+    padding-bottom: 80px;
+  }
+}
+
+/* Dark mode styles are now handled by theme variables */

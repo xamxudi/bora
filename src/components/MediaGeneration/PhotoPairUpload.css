@@ -1,0 +1,90 @@
+.photo-pair-upload {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 600px;
+    margin: auto;
+    position: relative;
+}
+
+.photo-slots {
+    display: flex;
+    gap: 12px;
+}
+
+.photo-slot {
+    flex: 1;
+    height: 220px;
+    border: 2px dashed var(--color-border);
+    border-radius: 10px;
+    background-color: var(--color-secondary);
+    color: var(--color-text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    transition: border 0.2s, background 0.2s;
+}
+
+.photo-slot:hover {
+    background-color: var(--color-secondary-hover);
+    color: var(--color-text-secondary-hover);
+}
+
+.photo-pair-upload .upload-placeholder {
+    font-size: 14px;
+    text-align: center;
+}
+
+.preview {
+    height: 100%;
+    border-radius: 8px;
+}
+
+.remove-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remove-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.swap-btn {
+  background: #fff;
+  border: 2px solid #6e6eff;
+  color: #6e6eff;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+
+  
+    position: absolute;
+    right: 50%;
+    transform: translate(50%, -50%);
+    top: 100%;
+}
+
+.swap-btn:hover {
+  background: #6e6eff;
+  color: white;
+  transform: translate(50%, -50%) rotate(180deg);
+}

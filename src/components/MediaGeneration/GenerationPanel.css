@@ -1,0 +1,66 @@
+/* Wrapper toàn bộ khung nội dung */
+.generation-panel-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+/* Nút Generate */
+.generation-panel .generate-btn {
+  background: linear-gradient(to right, #C33764, #1D2671);
+  color: #ffffff;
+  font-weight: bold;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  min-width: 150px;
+  cursor: pointer;
+}
+
+.nagetive-action {
+  color: var(--color-text-secondary);
+}
+
+.generation-panel .generate-btn:hover {
+  opacity: 0.9;
+}
+
+/* Responsive cho mobile */
+@media (max-width: 768px) {
+  .generation-panel-wrapper {
+    padding: 0 12px;
+  }
+
+  .generation-panel .generate-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .generation-panel input,
+  .generation-panel textarea {
+    width: 100% !important;
+  }
+
+  .generation-panel .text-end {
+    text-align: center !important;
+  }
+
+  .generation-panel .row > * {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .generation-panel {
+    gap: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .generation-panel-toggle {
+    display: none !important;
+  }
+}

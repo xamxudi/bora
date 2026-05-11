@@ -1,0 +1,186 @@
+.parameter-settings {
+  padding: 20px;
+  background: #1a1a28;
+  color: #e2e2e2;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header-buttons button {
+  margin-left: 10px;
+  padding: 4px 10px;
+  background: none;
+  color: #ccc;
+  border: 1px solid #444;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.header-buttons button:hover {
+  background: #333;
+}
+
+/* Model Theme */
+.model-theme {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+.theme-card {
+  position: relative;
+  width: 100px;
+  flex: 0 0 auto;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border 0.2s;
+}
+.theme-card.selected {
+  border: 2px solid #00c6ff;
+}
+.theme-card:hover {
+  border: 2px solid #555;
+}
+.theme-image {
+  width: 100%;
+  height: 70px;
+  object-fit: cover;
+  display: block;
+}
+.theme-name {
+  text-align: center;
+  font-size: 13px;
+  padding: 4px 0;
+}
+.theme-check {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  background: #00c6ff;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base Model Select */
+.base-model-select {
+  margin-bottom: 20px;
+}
+.base-model-select select {
+  width: 100%;
+  padding: 6px;
+  background: #252533;
+  border: 1px solid #444;
+  color: #ddd;
+  border-radius: 4px;
+}
+
+/* Sliders */
+.sliders {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+.slider-group {
+  flex: 1;
+}
+.slider-group input[type="range"] {
+  width: 100%;
+}
+
+/* Info */
+.info-text {
+  font-size: 13px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* Input Groups */
+.input-group {
+  margin-bottom: 15px;
+}
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 6px;
+  background: #252533;
+  border: 1px solid #444;
+  color: #ddd;
+  border-radius: 4px;
+}
+
+/* Queue Buttons */
+.queue-selection {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.queue-btn {
+  flex: 1;
+  padding: 8px;
+  background: #2d2d3a;
+  border: 1px solid #444;
+  color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.queue-btn.active {
+  background: #00c6ff;
+  color: #fff;
+}
+
+/* Start Training */
+.start-training {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.start-btn {
+  padding: 10px;
+  background: #00c6ff;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.start-btn:hover {
+  background: #00aee0;
+}
+.credits {
+  font-size: 13px;
+  color: #aaa;
+}
+.credits a {
+  color: #00c6ff;
+}
+
+.image-upload-box {
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  position: relative;
+}
+
+.image-upload-box:hover {
+  background-color: var(--color-secondary-hover);
+  color: var(--color-text-secondary-hover);
+}

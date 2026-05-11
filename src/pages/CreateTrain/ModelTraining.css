@@ -1,0 +1,258 @@
+/* Container */
+.model-training-container {
+  min-height: 100vh; /* Đảm bảo full chiều cao */
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: #161622;
+  color: #e2e2e2;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Tabs */
+.model-tabs {
+  display: flex;
+  border-bottom: 1px solid #333;
+  margin-bottom: 20px;
+}
+.model-tab {
+  padding: 12px 24px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #888;
+  font-size: 15px;
+  transition: all 0.2s;
+}
+.model-tab.active {
+  border-bottom: 2px solid #00c6ff;
+  color: #fff;
+}
+.model-tab:hover {
+  color: #ddd;
+}
+.new-badge {
+  background: #00c6ff;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 10px;
+  padding: 2px 5px;
+  margin-left: 6px;
+}
+
+/* Layout wrapper */
+.content-wrapper {
+  flex: 1;
+  display: flex;
+  gap: 40px;
+  align-items: stretch; /* Đảm bảo 2 cột cùng chiều cao */
+}
+
+/* Left column */
+.dataset-column {
+  flex: 1 1 360px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right column */
+.parameter-column {
+  flex: 1 1 360px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Upload card */
+.upload-card {
+  background: #20202e;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1; /* Kéo dài để cân cột */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Upload header */
+.upload-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Upload actions */
+.upload-actions button {
+  margin-left: 8px;
+  background: transparent;
+  color: #00c6ff;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+}
+.upload-actions button:hover {
+  text-decoration: underline;
+}
+
+/* Drop zone */
+.drop-zone {
+  border: 2px dashed #333;
+  border-radius: 6px;
+  text-align: center;
+  padding: 40px 10px;
+  margin-bottom: 20px;
+  background: #181822;
+}
+
+/* Upload button */
+.upload-button {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: #00c6ff;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.upload-button:hover {
+  background: #00a6d8;
+}
+
+/* Or divider */
+.or-divider {
+  text-align: center;
+  margin: 12px 0;
+  color: #888;
+  font-size: 13px;
+}
+
+/* Dataset info */
+.dataset-info {
+  font-size: 13px;
+  color: #aaa;
+  line-height: 1.5;
+}
+
+/* Upload limit */
+.upload-limit {
+  margin-top: auto; /* Đẩy xuống cuối cột */
+  background: #2b2b3b;
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Upgrade button */
+.upgrade-btn {
+  background: #ffb300;
+  border: none;
+  color: #000;
+  padding: 4px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.upgrade-btn:hover {
+  background: #ffca28;
+}
+
+/* Parameter Settings */
+.parameter-settings {
+  background: #20202e;
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Parameter Settings inner elements */
+.parameter-settings h2 {
+  margin-top: 0;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+.parameter-settings .group-title {
+  font-size: 14px;
+  color: #ccc;
+  margin-bottom: 8px;
+}
+.parameter-settings .theme-options {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.parameter-settings .theme-option {
+  padding: 6px 12px;
+  border: 1px solid #333;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #aaa;
+}
+.parameter-settings .theme-option.selected {
+  border-color: #00c6ff;
+  color: #fff;
+  background: #2a2a3a;
+}
+.parameter-settings input,
+.parameter-settings textarea {
+  background: #181822;
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 8px;
+  color: #ddd;
+  font-size: 13px;
+  width: 100%;
+}
+.parameter-settings .train-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+.parameter-settings .train-button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.parameter-settings .train-button.primary {
+  background: #00c6ff;
+  color: #fff;
+}
+.parameter-settings .train-button.secondary {
+  background: #333;
+  color: #ccc;
+}
+.parameter-settings .train-button.primary:hover {
+  background: #00a6d8;
+}
+.parameter-settings .train-button.secondary:hover {
+  background: #444;
+}
+.file-previews {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  gap: 12px;
+}
+
+.file-preview {
+  width: 80px;
+  text-align: center;
+  font-size: 11px;
+  color: #aaa;
+}
+
+.file-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #333;
+}

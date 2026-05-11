@@ -1,0 +1,53 @@
+.bora-creadit {
+  --sd-bg: #f5f7ff;
+  --sd-fg: #1f2937;
+  --sd-border: #dbe2f0;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 999px;
+  border: 1px solid var(--sd-border);
+  background: var(--sd-bg);
+  color: var(--sd-fg);
+  font-weight: 600;
+  user-select: none;
+  transition: transform .12s ease, box-shadow .12s ease, background .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.bora-creadit--sm { font-size: 12px; padding: 6px 10px; }
+.bora-creadit--md { font-size: 14px; padding: 8px 12px; }
+.bora-creadit--lg { font-size: 16px; padding:10px 14px; }
+
+.bora-creadit__icon { display: inline-block; line-height: 1; }
+.bora-creadit__value { letter-spacing: 0.2px; }
+
+.bora-creadit--solid {
+  --sd-bg: #f59e0b;
+  --sd-fg: #111827;
+  --sd-border: #f59e0b;
+  color: #111827;
+}
+.bora-creadit--solid:hover { filter: brightness(0.95); }
+
+.bora-creadit--soft {
+  --sd-bg: #fff7ed;
+  --sd-fg: #b45309;
+  --sd-border: #fed7aa;
+}
+.bora-creadit--soft:hover { background: #ffedd5; }
+
+.bora-creadit--outline {
+  --sd-bg: transparent;
+  --sd-fg: #b45309;
+  --sd-border: #f59e0b;
+  background: transparent;
+}
+.bora-creadit--outline:hover { background: #fff7ed; }
+
+.bora-creadit[role="button"],
+.bora-creadit.buttonlike { cursor: pointer; }
+.bora-creadit[role="button"]:active,
+.bora-creadit.buttonlike:active { transform: translateY(1px); }

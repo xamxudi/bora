@@ -1,0 +1,40 @@
+.development.feature-page {
+  height: 100vh;
+  background-color: #0f0f0f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  padding: 20px;
+}
+
+.development .feature-container {
+  text-align: center;
+  max-width: 500px;
+}
+
+.development .feature-logo {
+  width: 150px;
+  height: auto;
+  margin-bottom: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.development .feature-title {
+  font-size: 36px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.development .feature-subtitle {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #cccccc;
+}
+
+.development .feature-description {
+  font-size: 16px;
+  color: #888;
+  margin-bottom: 30px;
+}

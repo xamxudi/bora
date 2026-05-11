@@ -1,0 +1,167 @@
+/* Mobile Login Form Styles */
+.mobile-login-form {
+  background: transparent;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  position: relative;
+  top: 30px;
+}
+
+.mobile-logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0px;
+  margin-bottom: 8px;
+}
+
+.mobile-logo-icon {
+  width: 108px;
+  height: 78px;
+  object-fit: contain;
+  margin-right: -20px; /* pull closer to text */
+  filter: brightness(1.5) contrast(1.5);
+}
+
+.mobile-logo-text {
+  width: 170px;
+  height: 130px;
+  object-fit: contain;
+  margin-left: -20px; /* pull closer to icon */
+  filter: brightness(1.2) contrast(1.2);
+}
+
+.mobile-subtitle {
+  color: #b0b0b0;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.mobile-input-group {
+  position: relative;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.mobile-input-icon {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b0b0b0;
+  font-size: 18px;
+  z-index: 2;
+}
+
+.mobile-input {
+  width: 100%;
+  padding: 16px 16px 16px 50px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #b0b0b0;
+  color: white;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.mobile-input::placeholder {
+  color: #b0b0b0;
+}
+
+.mobile-input:focus {
+  border-bottom-color: #152f4d;
+}
+
+.mobile-login-btn {
+  width: 100%;
+  padding: 7px;
+  background: white;
+  color: #484877;
+  border: none;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.mobile-login-btn:hover:not(:disabled) {
+  background: #f0f0f0;
+}
+
+.mobile-login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.mobile-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.mobile-divider::before,
+.mobile-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #b0b0b0;
+}
+
+.mobile-divider span {
+  padding: 0 16px;
+}
+
+.mobile-social-btn {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  transition: opacity 0.3s;
+}
+
+.mobile-social-btn:hover {
+  opacity: 0.8;
+}
+
+.mobile-gmail-btn {
+  background: #1f3785;
+  color: white;
+}
+
+.mobile-signup-text {
+  margin-top: 20px;
+  color: #b0b0b0;
+  font-size: 14px;
+}
+
+.mobile-signup-link {
+  color: #dfe2e6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobile-signup-link:hover {
+  text-decoration: underline;
+} 
+.mobile-signup-link {
+  background: transparent !important;  /* bỏ nền trắng */
+  border: none !important;             /* bỏ viền nếu có */
+  padding: 0 !important;               /* bỏ khoảng cách padding */
+}

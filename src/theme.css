@@ -1,0 +1,77 @@
+:root {
+  --color-bg: #181a1b;
+  --color-surface: #23272a;
+  --color-surface-alt: #22262a;
+  --color-text: #f5f5f7;
+  --color-text-secondary: #b0b0b0;
+  --color-text-secondary-hover: #b0b0b0;
+  --color-border: #33373a;
+  --color-primary: #8faaff;
+  --color-primary-hover: #a3bfff;
+  --color-secondary: #33373a;
+  --color-secondary-hover: #222527;
+  --color-accent: #ffd54f;
+  --color-danger: #ff6f60;
+  --color-success: #81c784;
+  --color-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  --color-shadow-strong: 0 8px 32px rgba(0,0,0,0.32);
+
+  /* Gallery-specific */
+  --gallery-bg: var(--color-bg);
+  --gallery-column-bg: var(--color-surface);
+  --gallery-img-bg: var(--color-secondary);
+  --gallery-shadow: var(--color-shadow);
+  --gallery-img-shadow: 0 2px 12px rgba(0,0,0,0.32);
+}
+
+.light-theme {
+  --color-bg: #f5f5f7;
+  --color-bg-hover: #666;
+  --color-surface: #fff;
+  --color-surface-alt: #f0f1f3;
+  --color-text: #222;
+  --color-text-secondary: #666;
+  --color-text-secondary-hover: #242323;
+  --color-border: #e0e0e0;
+  --color-primary: #646cff;
+  --color-primary-hover: #535bf2;
+  --color-secondary: #e0e0e0;
+  --color-secondary-hover: #888787;
+  --color-accent: #ffb300;
+  --color-danger: #e53935;
+  --color-success: #43a047;
+  --color-shadow: 0 4px 20px rgba(0, 0, 0, 0.10);
+  --color-shadow-strong: 0 8px 32px rgba(0,0,0,0.18);
+
+  /* Gallery-specific */
+  --gallery-bg: var(--color-bg);
+  --gallery-column-bg: var(--color-surface);
+  --gallery-img-bg: var(--color-secondary);
+  --gallery-shadow: var(--color-shadow);
+  --gallery-img-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.dark-theme {
+  --color-bg: #181a1b;
+  --color-surface: #23272a;
+  --color-surface-alt: #22262a;
+  --color-text: #f5f5f7;
+  --color-text-secondary: #b0b0b0;
+  --color-text-secondary-hover: #b0b0b0;
+  --color-border: #33373a;
+  --color-primary: #8faaff;
+  --color-primary-hover: #a3bfff;
+  --color-secondary: #33373a;
+  --color-secondary-hover: #222527;
+  --color-accent: #ffd54f;
+  --color-danger: #ff6f60;
+  --color-success: #81c784;
+  --color-shadow: 0 4px 20px rgba(0,0,0,0.5);
+  --color-shadow-strong: 0 8px 32px rgba(0,0,0,0.32);
+
+  /* Gallery-specific */
+  --gallery-bg: var(--color-bg);
+  --gallery-column-bg: var(--color-surface);
+  --gallery-img-bg: var(--color-secondary);
+  --gallery-shadow: var(--color-shadow);
+  --gallery-img-shadow: 0 2px 12px rgba(0,0,0,0.32);
+}

@@ -1,0 +1,92 @@
+/* Layout chính */
+.layout-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+/* AppMenu */
+.appmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #111;
+  padding-top: 56px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+/* Desktop trạng thái */
+.appmenu.expanded {
+  width: 220px;
+}
+.appmenu.collapsed {
+  width: 60px;
+}
+
+/* Main content container */
+.main-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Nội dung chính */
+.main-wrapper {
+  flex: 1;
+  background: var(--color-bg);
+  color: #eee;
+  transition: margin-left 0.3s ease;
+  padding: 20px;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+/* Khi mở rộng */
+.layout-container.expanded .main-wrapper {
+  margin-left: 220px;
+}
+.layout-container.collapsed .main-wrapper {
+  margin-left: 60px;
+}
+
+/* Overlay cho mobile */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 999;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .appmenu {
+    width: 80vw;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+  }
+
+  .appmenu.expanded {
+    transform: translateX(0);
+  }
+
+  .appmenu.collapsed {
+    transform: translateX(-100%);
+  }
+
+  .main-wrapper {
+    margin-left: 0 !important;
+    padding: 16px;
+  }
+}

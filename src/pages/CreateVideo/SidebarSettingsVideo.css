@@ -1,0 +1,397 @@
+/* Sidebar Box */
+.settings-box {
+  background-color: var(--color-surface);
+  color: #e2e2e2;
+  padding: 16px;
+  border-radius: 12px;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Tabs */
+.mode-tabs {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 24px;
+  padding-bottom: 4px;
+}
+
+.tab {
+  flex: 1;
+  min-width: 80px;
+  background-color: #2a2a3a;
+  border: none;
+  color: #a0a0c0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.tab:hover {
+  background-color: #3a3a4a;
+}
+
+.tab.active {
+  background-color: #6e6eff;
+  color: white;
+  box-shadow: 0 2px 8px rgba(110, 110, 255, 0.3);
+}
+
+/* New badge */
+.tab.new {
+  position: relative;
+  overflow: visible;
+}
+
+.new-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: #ff4d4d;
+  color: white;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 10px;
+  line-height: 1;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e2e2;
+  margin: 0;
+}
+
+.add-btn {
+  background-color: transparent;
+  color: #6e6eff;
+  border: 1px dashed #6e6eff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.add-btn:hover {
+  background-color: rgba(110, 110, 255, 0.1);
+  border-style: solid;
+}
+
+/* Model */
+.model-selected-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+  padding: 12px;
+  transition: all 0.2s;
+  color: var(--color-text-secondary);
+}
+
+.model-selected-item:hover {
+  background-color: var(--color-secondary-hover);
+  color: var(--color-text-secondary-hover);
+}
+
+.model-selected-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  border: 1px solid #3a3a4a;
+  background: #434343;
+}
+
+.model-info {
+  flex: 1;
+}
+
+.model-info strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.change-model-btn {
+  background-color: transparent;
+  color: #6e6eff;
+  border: 1px solid #6e6eff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.change-model-btn:hover {
+  background-color: rgba(110, 110, 255, 0.1);
+}
+
+/* LoRA + ControlNet */
+.lora-selected-list,
+.controlnet-selected-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lora-item,
+.controlnet-item {
+  display: flex;
+  align-items: center;
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.2s;
+}
+
+.lora-item:hover,
+.controlnet-item:hover {
+  background-color: #3a3a4a;
+}
+
+.lora-item img,
+.controlnet-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 1px solid #3a3a4a;
+}
+
+.lora-info,
+.controlnet-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.lora-title,
+.controlnet-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.lora-title strong,
+.controlnet-title strong {
+  font-size: 13px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ff6e6e;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.remove-btn:hover {
+  opacity: 1;
+}
+
+.lora-controls,
+.controlnet-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.lora-controls input[type="range"],
+.controlnet-controls input[type="range"] {
+  flex: 1;
+  height: 4px;
+  border-radius: 2px;
+  background: #3a3a4a;
+  accent-color: #6e6eff;
+  cursor: pointer;
+}
+
+.strength-value {
+  font-size: 12px;
+  color: #a0a0c0;
+  min-width: 30px;
+  text-align: right;
+}
+
+/* Empty State */
+.empty-state {
+  background-color: #2a2a3a;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  color: #a0a0c0;
+  font-size: 13px;
+}
+
+/* VAE Section */
+.vae-section {
+  margin-top: 24px;
+}
+
+.vae-select {
+  width: 100%;
+  padding: 10px 12px;
+  background-color: var(--color-secondary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 13px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='white'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+}
+
+.vae-select:focus {
+  outline: none;
+  border-color: #6e6eff;
+  box-shadow: 0 0 0 2px rgba(110, 110, 255, 0.2);
+}
+
+.vae-select option {
+  background: #2a2a3a;
+  color: #e2e2e2;
+  cursor: pointer;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2a2a3a;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6e6eff;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #5a5aff;
+}
+
+.model-buttons-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.model-buttons-row .add-btn {
+  flex: 1;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .settings-box {
+    padding: 12px;
+  }
+
+  .model-selected-item,
+  .lora-item,
+  .controlnet-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .model-selected-item img,
+  .lora-item img,
+  .controlnet-item img {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .model-info,
+  .lora-info,
+  .controlnet-info {
+    width: 100%;
+  }
+
+  .lora-controls,
+  .controlnet-controls {
+    width: 100%;
+    gap: 6px;
+  }
+
+  .strength-value {
+    min-width: auto;
+    font-size: 13px;
+  }
+
+  .model-buttons-row {
+    flex-direction: column;
+  }
+
+  .model-buttons-row .add-btn {
+    width: 100%;
+  }
+
+  .vae-select {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .tab {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+
+.image-upload-box {
+  border: 2px dashed var(--color-border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  background-color: var(--color-secondary);
+  position: relative;
+  color: var(--color-text-secondary);
+}
+
+.image-upload-box:hover {
+  background-color: var(--color-secondary-hover);
+  color: var(--color-text-secondary-hover);
+}

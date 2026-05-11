@@ -1,0 +1,8 @@
+REACT_APP_API_BASE_URL=https://localhost:5472
+REACT_APP_NOTIFICATION_URL=https://localhost:55106
+REACT_APP_PICSHARE_URL=https://picshare.sendenvn.com
+
+REACT_APP_AIGEN_API_URL=https://localhost:7273
+REACT_APP_COOKIE_AUTH=AuthCookie
+
+REACT_APP_GOOGLE_OAUTH_CLIENTID=311975186021-ffnv3nh1pdpo86tq34ff2pdmvoobiaba.apps.googleusercontent.com

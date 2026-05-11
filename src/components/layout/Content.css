@@ -1,0 +1,162 @@
+/* ================= CONTENT LAYOUT ================== */
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+.section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem auto;
+}
+
+.section-header {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: #222;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 0.5rem;
+}
+
+.card-info .title {
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-info .meta {
+  font-size: 0.75rem;
+  color: #aaa;
+  display: flex;
+  justify-content: space-between;
+}
+
+.view-all {
+  margin-top: 1rem;
+  padding: 0.4rem 0.75rem;
+  background: #333;
+  border: none;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.view-all:hover {
+  background: #444;
+}
+
+/* =============== MOBILE STYLING (<= 480px) ================= */
+
+@media (max-width: 480px) {
+  .content-container {
+    padding: 1rem;
+  }
+
+  .section-header {
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+
+  .card-info {
+    padding: 0.8rem;
+    text-align: center;
+  }
+
+  .card-info .title {
+    font-size: 1rem;
+    font-weight: 500;
+    white-space: normal;
+    text-overflow: clip;
+  }
+
+  .card-info .meta {
+    font-size: 0.8rem;
+    color: #aaa;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .view-all {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.7rem;
+  }
+  @media (max-width: 480px) {
+  .image-slider, .carousel {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* hoặc 1 / 1 nếu ảnh vuông */
+    overflow: hidden;
+  }
+
+  .image-slider img, .carousel img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .carousel-button, .slider-arrow {
+    font-size: 1.5rem;
+    width: 32px;
+    height: 32px;
+  }
+}
+}

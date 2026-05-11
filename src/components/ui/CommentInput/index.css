@@ -1,0 +1,106 @@
+.comment-input {
+  display: flex;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.comment-input:disabled,
+.comment-input[disabled] {
+  background: transparent !important;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.comment-input:disabled *,
+.comment-input[disabled] * {
+  background: transparent !important;
+  pointer-events: none;
+}
+
+.comment-input {
+  background-color: var(--color-surface-alt);
+  color: var(--color-text);
+}
+
+.comment-input .message-area {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  resize: none;
+}
+
+.comment-input .message-area input,
+.comment-input .message-area textarea {
+  background: transparent;
+  width: 100%;
+  resize: none;
+  border: none;
+  border: none;
+  /* bỏ luôn border khi focus */
+  outline: none;
+  /* bỏ outline xanh */
+  box-shadow: none;
+  /* bỏ hiệu ứng shadow (nếu có) */
+  font-size: 16px;
+  line-height: 1.5em;
+  margin-left: 10px;
+  color: var(--color-text);
+}
+
+.comment-input .message-area textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.comment-input .message-area textarea {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE, Edge cũ */
+}
+
+.comment-input .button-icons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.comment-input .icon-button {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.comment-input .send-button {
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.comment-input .unvisibility {
+  visibility: hidden;
+}
+
+
+.icon-button.voice.active {
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,287 @@
+/* Modal Overlay */
+.task-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(17, 17, 27, 0.9) 100%);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px;
+  opacity: 0;
+  animation: fadeInOverlay 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes fadeInOverlay {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Modal Content */
+.task-modal-content {
+  background: linear-gradient(145deg, #1e1e2e 0%, #262640 100%);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 1200px;
+  max-width: 95vw;
+  height: 700px;
+  max-height: 90vh;
+  overflow: hidden;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transform: scale(0.9) translateY(20px);
+  animation: scaleInModal 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation-delay: 0.1s;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+}
+
+@keyframes scaleInModal {
+  from { transform: scale(0.9) translateY(20px); }
+  to { transform: scale(1) translateY(0); }
+}
+
+/* Media Section */
+.task-modal-media {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(145deg, #0f0f1a 0%, #1a1a2e 100%);
+  padding: 20px;
+}
+
+.task-modal-media img,
+.task-modal-media video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.task-modal-media img:hover { transform: scale(1.02); }
+
+/* Info Section */
+.task-modal-info {
+  width: 500px;
+  max-width: 100%;
+  padding: 30px;
+  overflow-y: auto;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section Box */
+.info-section {
+  margin-bottom: 24px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #22d3ee;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-title::before {
+  content: '';
+  width: 4px; height: 16px;
+  background: linear-gradient(180deg, #22d3ee, #06b6d4);
+  border-radius: 2px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+.info-label { color: #d1d5db; font-weight: 600; }
+.info-value { color: #22d3ee; }
+
+/* Status Badge */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.status-badge.queued { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+
+/* Prompt Box */
+.prompt-display {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  font-family: monospace;
+  font-size: 12px;
+  color: #e5e7eb;
+  max-height: 120px;
+  overflow-y: auto;
+}
+
+/* Params Grid */
+.params-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+.params-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.param-item {
+  text-align: center;
+  padding: 12px 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.param-item:hover {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+.param-label {
+  display: block;
+  font-size: 11px;
+  color: #9ca3af;
+  font-weight: 500;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.param-value {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 600;
+}
+/* Close Button */
+/* Ẩn nút Đóng */
+.close-button {
+  display: none !important;
+}
+
+/* Icon Close luôn hiển thị */
+.close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: color 0.2s ease;
+  display: block !important; /* luôn hiển thị */
+}
+
+.close-icon:hover {
+  color: #f87171;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .task-modal-content {
+    flex-direction: column;
+    width: 95vw;
+    height: auto;
+    max-height: 95vh;
+  }
+  .task-modal-media {
+    height: 160px;
+    flex: 0 0 160px;
+    padding: 12px;
+  }
+  .task-modal-info {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
+/* Nút đóng mặc định chỉ hiện desktop */
+.close-button {
+  display: block;
+}
+
+.close-icon {
+  display: none;
+}
+
+/* Mobile dưới 768px thì đổi */
+@media (max-width: 768px) {
+  .close-button {
+    display: none; /* Ẩn nút dưới */
+  }
+
+   .close-button {
+    position: relative;
+    margin: 16px 0 0 0;
+    border-radius: 12px;
+  }
+}
+/* Nút Đóng (desktop) */
+.close-button {
+  display: block;
+}
+
+/* Icon Close (ẩn mặc định) */
+.close-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  line-height: 1;
+  transition: color 0.2s ease;
+  display: none; /* mặc định ẩn */
+}
+.close-icon:hover {
+  color: #f87171; /* đỏ nhạt khi hover */
+}
+
+/* Mobile dưới 768px thì đổi */
+@media (max-width: 768px) {
+  .close-button {
+    display: none; /* Ẩn nút dưới */
+  }
+
+  .close-icon {
+    display: block; /* Hiện icon X góc phải */
+  }
+}

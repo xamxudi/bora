@@ -1,0 +1,415 @@
+
+.controlnet-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.controlnet-modal-content {
+  width: 90%;
+  max-width: 1000px;
+  max-height: 90vh;
+  background-color: #1e2029;
+  border-radius: 12px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.controlnet-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.controlnet-modal-header h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.search-input {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: 1px solid #3d3d3d;
+  background-color: #2d2d2d;
+  color: white;
+  width: 250px;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.controlnet-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 15px;
+  border-bottom: 1px solid #2d2d2d;
+}
+
+.category-btn {
+  padding: 8px 15px;
+  border-radius: 20px;
+  border: none;
+  background-color: #2d2d2d;
+  color: #aaa;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.category-btn.active {
+  background-color: #4dffb8;
+  color: #1e2029;
+}
+
+.controlnet-grid-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 15px;
+}
+
+.controlnet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.controlnet-card {
+  background-color: #2d2d2d;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 1px solid transparent;
+}
+
+.controlnet-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.controlnet-card.selected {
+  border-color: #4dffb8;
+  background-color: rgba(77, 255, 184, 0.1);
+}
+
+.controlnet-thumbnail {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.controlnet-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.controlnet-info {
+  padding: 12px;
+}
+
+.controlnet-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.controlnet-version {
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.controlnet-select {
+  padding: 8px;
+  text-align: center;
+  background-color: #3d3d3d;
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.controlnet-card.selected .controlnet-select {
+  background-color: #4dffb8;
+  color: #1e2029;
+}
+
+.selected-controlnets {
+  padding: 15px;
+  border-top: 1px solid #2d2d2d;
+}
+
+.selected-controlnets h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.selected-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 50px;
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.selected-item {
+  background-color: #3d3d3d;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+}
+
+.selected-item button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0 5px;
+}
+
+.empty-state {
+  color: #aaa;
+  font-style: italic;
+}
+
+.controlnet-modal-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-top: 1px solid #2d2d2d;
+}
+
+.footer-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-btn {
+  padding: 8px 15px;
+  background-color: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  color: #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.controlnet-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  border-top: 1px solid #2d2d2d;
+}
+
+/* Nút Reset */
+.controlnet-modal-footer button:first-child {
+  padding: 8px 18px;
+  background-color: #2d2d2d;
+  border: 1px solid #3d3d3d;
+  color: #aaa;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.controlnet-modal-footer button:first-child:hover {
+  background-color: #3d3d3d;
+}
+
+/* Nút Done */
+.controlnet-modal-footer button:last-child {
+  padding: 8px 20px;
+  background-color: #4dffb8;
+  border: none;
+  color: #1e2029;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+.controlnet-modal-footer button:last-child:hover {
+  background-color: #3ee6a0;
+}
+.controlnet-modal-footer button:last-child:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+/* ========== Mobile Responsive for ControlNet Modal ========== */
+
+/* Mobile nhỏ - dưới 480px */
+@media (max-width: 480px) {
+  .controlnet-modal-content {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  .controlnet-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 15px;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 0.95rem;
+  }
+
+  .controlnet-categories {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 6px;
+  }
+
+  .category-btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    white-space: nowrap;
+  }
+
+  .controlnet-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .controlnet-thumbnail {
+    height: 110px;
+  }
+
+  .controlnet-info {
+    padding: 10px;
+  }
+
+  .controlnet-name {
+    font-size: 0.9rem;
+  }
+
+  .controlnet-version {
+    font-size: 0.75rem;
+  }
+
+  .controlnet-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .footer-btn,
+  .controlnet-modal-footer button {
+    width: 100%;
+  }
+}
+
+/* Mobile vừa - dưới 768px */
+@media (max-width: 768px) {
+  .controlnet-modal-content {
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+  }
+
+  .controlnet-modal-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .search-input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .controlnet-categories {
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .category-btn {
+    font-size: 0.85rem;
+    padding: 6px 14px;
+  }
+
+  .controlnet-grid {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  .controlnet-thumbnail {
+    height: 120px;
+  }
+
+  .controlnet-info {
+    padding: 10px;
+  }
+
+  .controlnet-name {
+    font-size: 0.95rem;
+  }
+
+  .controlnet-version {
+    font-size: 0.8rem;
+  }
+
+  .controlnet-modal-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .footer-btn,
+  .controlnet-modal-footer button {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .controlnet-modal-header {
+    position: relative;
+    padding-top: 80px; /* chừa khoảng cho nút X */
+  }
+
+  .controlnet-modal-header .close-btn {
+    position: absolute;
+    top: 50px;
+    right: 12px;
+    z-index: 1001;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: white;
+  }
+}
